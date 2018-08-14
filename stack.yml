@@ -1117,3 +1117,8 @@ Resources:
         - Key: Name
           Value: !Sub ${AWS::StackName}-ApplicationAutoscaling-instance
           PropagateAtLaunch: "true"
+
+Outputs:
+  PublicURL:
+    Description: Public DNS name of Application Load Balancer
+    Value: !Sub ${ApplicationLoadBalancer.DNSName}
